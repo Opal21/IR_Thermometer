@@ -1,5 +1,5 @@
 {
     "configuration": "cpu=atmega328old",
     "board": "arduino:avr:nano",
-    "sketch": "main.ino"
+    "sketch": "IR_Thermometer.ino"
 }

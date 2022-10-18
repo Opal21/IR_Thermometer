@@ -1,3 +1,4 @@
+#include "inc/millisDelay.h"
 #include <Adafruit_SSD1306.h>
 
 #define SCREEN_WIDTH 128 // OLED display width, in pixels
@@ -30,20 +31,18 @@ void setup() {
 }
 
 void loop() {
-    if (displayDelay.justFinished()) {
-      display.clearDisplay();
-      display.setTextSize(2);
-      display.setCursor(35, 5);
-      display.print("-----");
-      display.setCursor(105, 20);
-      display.print("");
-      display.setTextSize(2);
-      display.setCursor(35, 40);
-      display.print("-----");
-      display.setCursor(105, 46);
-      display.print("");
-      display.display();
-    }
+    display.clearDisplay();
+    display.setTextSize(2);
+    display.setCursor(35, 5);
+    display.print("-----");
+    display.setCursor(105, 20);
+    display.print("");
+    display.setTextSize(2);
+    display.setCursor(35, 40);
+    display.print("-----");
+    display.setCursor(105, 46);
+    display.print("");
     display.display();
+    delay(25000);
     displayDelay.stop(); //stop refresh display
 }
